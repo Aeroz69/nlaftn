@@ -10,14 +10,14 @@ if not os.getenv('DEVICE_ID') and \
           "If you're confused, re-watch the tutorial.")
     sys.exit()
 
-os.system('pip install -U spg')
+os.system('pip install -U SPG')
 os.system('clear')
 
-import spg
+import SPG
 
 asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 
-client = spg.PartyBot(
+client = SPG.PartyBot(
     device_id=os.getenv('DEVICE_ID'),
     account_id=os.getenv('ACCOUNT_ID'),
     secret=os.getenv('SECRET')
