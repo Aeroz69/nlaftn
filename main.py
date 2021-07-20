@@ -10,14 +10,14 @@ if not os.getenv('DEVICE_ID') and \
           "If you're confused, re-watch the tutorial.")
     sys.exit()
 
-os.system('pip install -U NLA')
+os.system('pip install -U nlabot')
 os.system('clear')
 
-import NLA
+import nlabot
 
 asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 
-client = NLA.PartyBot(
+client = nlabot.PartyBot(
     device_id=os.getenv('DEVICE_ID'),
     account_id=os.getenv('ACCOUNT_ID'),
     secret=os.getenv('SECRET')
